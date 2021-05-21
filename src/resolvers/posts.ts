@@ -2,8 +2,6 @@ import { Query, Resolver, Mutation, Arg } from 'type-graphql'
 import { Service } from 'typedi';
 import { Post, CreatePostInput, UpdatePostInput } from '../schema/post';
 import { PostService } from '../database/services/Postservice';
-
-@Service()
 @Resolver(() => Post)
 export class PostResolver {
     constructor(private readonly postService: PostService) { }
